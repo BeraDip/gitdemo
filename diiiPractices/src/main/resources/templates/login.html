@@ -1,0 +1,9 @@
+<html xmlns:th="http://www.thyemeleaf.org">
+    <body>
+        <form th:action="@{/dasboard}" method="post">
+            <input type="text" placeholder="UserName" th:name="userName" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <input type="submit" name="submit">
+        </form>
+    </body>
+</html>            

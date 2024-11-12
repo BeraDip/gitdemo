@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <center>
+        <table border="1" bgcolor="gray" height="300" width="400">  
+            <tr bgcolor="yellow">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Class</th>
+            </tr>  
+             
+            <tr th:each="a1 : ${allUser}" bgcolor="green">
+                <td th:text="${a1.id}" bgcolor="orange"></td>
+                <td th:text="${a1.name}"></td>
+                <td th:text="${a1.Clas}"></td>
+                <td bgcolor="red"> <a th:href="@{/userEntity/delete/{id}(id=${a1.id} )}"> Delete  </a></td>
+            </tr>   
+        </table>
+        <center>
+    </body>
+</html>
